@@ -1,0 +1,1 @@
+export const VERIFICATION_CODE_EXPIRY = 10 * 60 * 100

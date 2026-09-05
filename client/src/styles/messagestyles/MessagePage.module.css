@@ -1,0 +1,234 @@
+.container {
+    width: 100%;
+    height: calc(100dvh - 56px);
+    max-height: calc(100dvh - 56px);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.pageStack {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.pageHeader {
+    flex-shrink: 0;
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--mantine-color-text);
+}
+
+.subtitle {
+    color: var(--mantine-color-dimmed);
+    font-size: 13px;
+}
+
+.layout {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 340px;
+    min-width: 300px;
+    max-width: 380px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+    background: var(--pulsehub-community-card-surface);
+    border: 1px solid var(--mantine-color-default-border);
+    border-radius: 16px;
+}
+
+.sidebarHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px 10px;
+    border-bottom: 1px solid var(--mantine-color-default-border);
+    background: color-mix(
+        in srgb, 
+        var(--mantine-color-default) 60%, 
+        transparent);
+    flex-shrink: 0;
+}
+
+.sidebarTitle {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--mantine-color-dimmed);
+}
+
+.sidebarCount {
+    font-size: 11px;
+    color: var(--mantine-color-dimmed);
+    font-weight: 500;
+}
+
+.sidebarBody {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 8px;
+}
+
+.centerState {
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+}
+
+.emptySidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px 14px;
+    gap: 4px;
+}
+
+.emptyIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--mantine-color-default);
+    border: 1px solid var(--mantine-color-default-border);
+    color: var(--mantine-color-dimmed);
+    margin-bottom: 6px;
+}
+
+.emptyHint {
+    max-width: 180px;
+    line-height: 1.4;
+}
+
+.alert {
+    font-size: 13px;
+    margin: 8px;
+}
+
+.chatArea {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: var(--pulsehub-community-card-surface);
+    border: 1px solid var(--mantine-color-default-border);
+    border-radius: 16px;
+}
+
+.emptyChat {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 24px;
+    text-align: center;
+}
+
+.emptyChatIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--mantine-color-default);
+    border: 1px solid var(--mantine-color-default-border);
+    color: var(--mantine-color-dimmed);
+    margin-bottom: 8px;
+}
+
+@media (max-width: 48em) {
+    .container {
+        height: calc(100dvh - 56px);
+        max-height: calc(100dvh - 56px);
+        padding-top: 12px;
+        padding-bottom: 0;
+    }
+
+    .pageHeader {
+        margin-bottom: 12px;
+    }
+
+    .title {
+        font-size: 19px;
+    }
+
+    .layout {
+        flex-direction: column;
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+        gap: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+        border-radius: 14px;
+    }
+
+    .chatArea {
+        width: 100%;
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+        border-radius: 14px;
+    }
+
+    .layout.hasSelection .sidebar {
+        display: none;
+    }
+
+    .layout.hasSelection .chatArea {
+        display: flex;
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .layout.noSelection .chatArea {
+        display: none;
+    }
+
+    .layout.noSelection .sidebar {
+        display: flex;
+        flex: 1;
+        min-height: 0;
+    }
+}

@@ -1,0 +1,266 @@
+.pageStack {
+    width: 100%;
+}
+
+.pageHeader {
+    margin-bottom: 18px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--mantine-color-text);
+}
+
+.subtitle {
+    color: var(--mantine-color-dimmed);
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.tabs {
+    width: 100%;
+}
+
+.tabsList {
+    border-color: var(--mantine-color-default-border);
+    gap: 20px;
+}
+
+.tabsList::before {
+    border-color: var(--mantine-color-default-border);
+}
+
+.tab {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 2px;
+}
+
+.tab[data-active] {
+    font-weight: 600;
+}
+
+.requestBadge {
+    margin-left: 6px;
+    background: var(--mantine-primary-color-filled);
+    color: white;
+    font-weight: 700;
+}
+
+.tabPanel {
+    min-height: 160px;
+}
+
+.avatarWrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    line-height: 0;
+}
+
+.presenceDot {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    display: flex;
+    line-height: 0;
+    pointer-events: none;
+}
+
+.emptyPanel {
+    background: var(--pulsehub-community-card-surface);
+    border: 1px solid var(--mantine-color-default-border);
+    border-radius: 16px;
+}
+
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 36px 16px;
+    min-height: 160px;
+    gap: 4px;
+}
+
+.emptyIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--mantine-color-default);
+    border: 1px solid var(--mantine-color-default-border);
+    color: var(--mantine-color-dimmed);
+    margin-bottom: 6px;
+}
+
+.emptyHint {
+    max-width: 220px;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+.hintCenter {
+    padding: 18px 0;
+}
+
+.alert {
+    font-size: 13px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.list {
+    width: 100%;
+}
+
+.rowCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: var(--pulsehub-community-card-surface);
+    border: 1px solid var(--mantine-color-default-border);
+    transition: all 150ms ease;
+}
+
+.rowCard:hover {
+    border-color: color-mix(in srgb, var(--mantine-color-default-border) 70%, var(--mantine-color-text) 30%);
+    background: var(--mantine-color-default-hover);
+}
+
+.rowCardButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: var(--pulsehub-community-card-surface);
+    border: 1px solid var(--mantine-color-default-border);
+    text-align: left;
+    transition: all 150ms ease;
+}
+
+.rowCardButton:hover {
+    background: var(--mantine-color-default-hover);
+}
+
+.rowMain {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    flex: 1;
+    text-align: left;
+}
+
+.rowMainStatic {
+    min-width: 0;
+    flex: 1;
+}
+
+.rowAvatar {
+    flex-shrink: 0;
+    border: 1px solid var(--mantine-color-default-border);
+    font-size: 12px;
+    font-weight: 700;
+    background: var(--mantine-color-default);
+}
+
+.rowInfo {
+    min-width: 0;
+}
+
+.rowName {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--mantine-color-text);
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rowMeta {
+    font-size: 11px;
+    color: var(--mantine-color-dimmed);
+    line-height: 1.2;
+}
+
+.primaryAction {
+    height: 28px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.12) inset;
+}
+
+.subtleDanger {
+    height: 28px;
+    font-size: 12px;
+    font-weight: 500;
+    background: var(--mantine-color-default);
+    border: 1px solid var(--mantine-color-default-border);
+    color: var(--mantine-color-dimmed);
+}
+
+.subtleDanger:hover {
+    color: var(--mantine-color-red-5);
+    border-color: color-mix(in srgb, var(--mantine-color-red-5) 30%, var(--mantine-color-default-border));
+    background: var(--mantine-color-default-hover);
+}
+
+.searchWrap {
+    max-width: 380px;
+}
+
+.searchInput :global(.mantine-TextInput-input) {
+    background: var(--pulsehub-community-card-surface);
+    border-color: var(--mantine-color-default-border);
+}
+
+@media (max-width: 48em) {
+   .pageHeader {
+        margin-bottom: 14px;
+    }
+
+   .title {
+        font-size: 19px;
+    }
+
+   .tabsList {
+        gap: 14px;
+    }
+
+   .grid {
+        grid-template-columns: 1fr;
+    }
+
+   .rowCard,
+   .rowCardButton {
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+   .searchWrap {
+        max-width: 100%;
+    }
+
+   .emptyState {
+        padding: 28px 14px;
+        min-height: 140px;
+    }
+}

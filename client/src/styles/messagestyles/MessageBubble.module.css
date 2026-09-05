@@ -1,0 +1,99 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    padding: 2px 0;
+}
+
+.mineWrapper {
+    justify-content: flex-end;
+}
+
+.theirWrapper {
+    justify-content: flex-start;
+}
+
+.bubble {
+    max-width: 68%;
+    padding: 9px 12px 6px;
+    border-radius: 18px;
+    line-height: 1;
+    position: relative;
+    transition: all 120ms ease;
+    word-break: break-word;
+}
+
+.theirs {
+    background: var(--mantine-color-default);
+    border: 1px solid var(--mantine-color-default-border);
+    border-bottom-left-radius: 5px;
+    color: var(--mantine-color-text);
+}
+
+.mine {
+    background: var(--mantine-primary-color-filled);
+    border: 1px solid transparent;
+    border-bottom-right-radius: 5px;
+    color: white;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.12) inset;
+}
+
+.content {
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.45;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.meta {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 5px;
+    text-align: right;
+    letter-spacing: 0.01em;
+}
+
+.theirs .meta {
+    color: var(--mantine-color-dimmed);
+    opacity: 0.9;
+}
+
+.mine .meta {
+    color: rgba(255,255,255,0.75);
+}
+
+.menuDropdown {
+    border-radius: 12px;
+    border: 1px solid var(--mantine-color-default-border);
+    background: var(--pulsehub-community-card-surface);
+    padding: 4px;
+    min-width: 160px;
+}
+
+.menuItem {
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+@media (max-width: 48em) {
+    .bubble {
+        max-width: 78%;
+        padding: 8px 11px 5px;
+        border-radius: 16px;
+    }
+
+    .theirs {
+        border-bottom-left-radius: 4px;
+    }
+
+    .mine {
+        border-bottom-right-radius: 4px;
+    }
+
+    .content {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,72 @@
+.header {
+  background: var(--pulsehub-structural-surface);
+  border-bottom: 1px solid var(--mantine-color-default-border);
+}
+
+.inner {
+  height: 100%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.logoLink {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.burger {
+  --burger-color: var(--mantine-color-text);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.loginButton {
+  font-weight: 500;
+}
+
+.registerButton {
+  font-weight: 600;
+}
+
+.userTrigger {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 6px 4px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.userTrigger:hover {
+  background: var(--mantine-color-default-hover);
+  border-color: var(--mantine-color-default-border);
+}
+
+.userTrigger[data-expanded="true"] {
+  background: var(--mantine-color-default);
+  border-color: var(--mantine-color-default-border);
+}
+
+.username {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--mantine-color-text);
+}
+
+.avatar {
+  flex-shrink: 0;
+}

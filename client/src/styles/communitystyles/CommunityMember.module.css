@@ -1,0 +1,172 @@
+.panel {
+    overflow: hidden;
+    background: var(--pulsehub-community-card-surface);
+    border: 1px solid var(--mantine-color-default-border);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--mantine-color-default-border);
+    background: color-mix(in srgb, var(--mantine-color-default) 60%, transparent);
+}
+
+.subHeaderText {
+    color: var(--mantine-color-dimmed);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.onlineCount {
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+.list {
+    padding: 6px;
+}
+
+.memberRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 12px;
+    transition: all 150ms ease;
+    text-align: left;
+}
+
+.memberRow:hover {
+    background: var(--mantine-color-default-hover);
+}
+
+.memberRow:active {
+    transform: scale(0.995);
+}
+
+.memberMain {
+    min-width: 0;
+    flex: 1;
+}
+
+.avatarWrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    line-height: 0;
+}
+
+.presenceDot {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    display: flex;
+    line-height: 0;
+    pointer-events: none;
+}
+
+.memberAvatar {
+    flex-shrink: 0;
+    border: 1px solid var(--mantine-color-default-border);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.memberInfo {
+    min-width: 0;
+    gap: 1px;
+}
+
+.username {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--mantine-color-text);
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profileLink {
+    font-size: 11px;
+    color: var(--mantine-color-dimmed);
+    line-height: 1.2;
+}
+
+.chevron {
+    flex-shrink: 0;
+    color: var(--mantine-color-dimmed);
+    opacity: 0.6;
+    transition: all 150ms ease;
+}
+
+.memberRow:hover .chevron {
+    opacity: 1;
+    transform: translateX(2px);
+    color: var(--mantine-color-text);
+}
+
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 36px 16px;
+    min-height: 160px;
+    gap: 4px;
+}
+
+.emptyHint {
+    max-width: 220px;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+.errorWrap {
+    padding: 12px;
+}
+
+.alert {
+    font-size: 13px;
+}
+
+@media (max-width: 48em) {
+    .panel {
+        border-radius: 14px;
+    }
+
+    .subHeader {
+        padding: 9px 12px;
+    }
+
+    .list {
+        padding: 4px;
+    }
+
+    .memberRow {
+        padding: 10px 8px;
+        border-radius: 10px;
+    }
+
+    .memberAvatar {
+        width: 34px!important;
+        height: 34px!important;
+    }
+
+    .username {
+        font-size: 13px;
+    }
+
+    .emptyState {
+        padding: 28px 14px;
+        min-height: 140px;
+    }
+}

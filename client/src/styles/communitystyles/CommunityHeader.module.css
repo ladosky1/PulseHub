@@ -1,0 +1,204 @@
+.header {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--mantine-color-default-border);
+    border-top: 1px solid color-mix(
+        in srgb, 
+        var(--mantine-color-default-border) 60%, 
+        white 40%);
+    border-radius: 20px;
+    background: var(--pulsehub-community-card-surface);
+    box-shadow:
+        0 1px 0 rgba(255,255,255,0.04) inset,
+        0 8px 24px rgba(0,0,0,0.25);
+}
+
+.banner {
+    position: relative;
+    height: 156px;
+    overflow: hidden;
+}
+
+.bannerRadial {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at top right, rgba(255, 255, 255, 0.12) 0%, transparent 65%);
+}
+
+.bannerGrain {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--pulsehub-community-card-surface) 0%, transparent 85%);
+    opacity: 0.95;
+}
+
+.content {
+    position: relative;
+    padding: 0 var(--mantine-spacing-xl) var(--mantine-spacing-xl);
+}
+
+.identity {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--mantine-spacing-md);
+    min-width: 0;
+    margin-top: -32px;
+}
+
+.avatar {
+    flex-shrink: 0;
+    color: var(--mantine-color-text);
+    background: var(--pulsehub-structural-surface);
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    border: 3px solid var(--pulsehub-community-card-surface);
+    box-shadow: var(--mantine-shadow-sm);
+}
+
+.identityInfo {
+    min-width: 0;
+    padding-bottom: 4px;
+}
+
+.title {
+    min-width: 0;
+    line-height: 1.1;
+    font-family: var(--mantine-font-family-headings);
+    color: var(--mantine-color-text);
+}
+
+.metadata {
+    min-width: 0;
+}
+
+.categoryBadge {
+    height: 22px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    backdrop-filter: blur(8px);
+    border-width: 1px;
+}
+
+.memberMeta {
+    color: var(--mantine-color-dimmed);
+}
+
+.creator {
+    white-space: nowrap;
+    color: var(--mantine-color-dimmed);
+}
+
+.description {
+    max-width: 640px;
+    margin-top: var(--mantine-spacing-md);
+    margin-left: 104px;
+    line-height: 1.6;
+    color: var(--mantine-color-text);
+    opacity: 0.8;
+}
+
+.actions {
+    position: absolute;
+    top: 20px;
+    right: var(--mantine-spacing-xl);
+}
+
+.leaveButton {
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--mantine-primary-color-filled) 30%, transparent), 0 1px 0 rgba(255,255,255,0.15) inset;
+}
+
+.deleteButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid var(--mantine-color-default-border);
+    border-radius: var(--mantine-radius-md);
+    color: var(--mantine-color-dimmed);
+    background: var(--mantine-color-default);
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.deleteButton:hover {
+    color: var(--mantine-color-red-5);
+    border-color: var(--mantine-color-red-6);
+    background: var(--mantine-color-default-hover);
+}
+
+@media (max-width: 48em) {
+    .banner { 
+        height: 110px; 
+    }
+
+    .content { 
+        padding: 0 var(--mantine-spacing-md) var(--mantine-spacing-md); 
+    }
+
+    .identity {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: -34px;
+    }
+
+    .avatar { 
+        width: 72px!important; 
+        height: 72px!important; 
+        font-size: 18px!important;
+    }
+
+    .identityInfo {
+        width: 100%;
+        padding-bottom: 0;
+        gap: 10px!important;
+    }
+
+    .title {
+        line-height: 1.2;
+        padding-top: 2px;
+    }
+
+    .metadata {
+        gap: 8px;
+        column-gap: 8px;
+    }
+
+    .description { 
+        margin-left: 0; 
+        margin-top: 14px;
+        line-height: 1.6;
+    }
+
+    .actions { 
+        position: static; 
+        justify-content: flex-end; 
+        margin-top: 18px;
+        width: 100%;
+    }
+
+    .leaveButton {
+        box-shadow: none!important;
+        opacity: 0.9;
+        height: 32px;
+        font-size: 13px;
+        background: var(--mantine-color-default);
+        color: var(--mantine-color-text);
+        border: 1px solid var(--mantine-color-default-border);
+    }
+
+    .leaveButton:hover {
+        background: var(--mantine-color-default-hover);
+    }
+
+    .deleteButton {
+        width: 32px;
+        height: 32px;
+        opacity: 0.85;
+    }
+}

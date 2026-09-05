@@ -1,0 +1,8 @@
+.indicator {
+    width: 9px;
+    height: 9px;
+    background-color: #34D399;
+    border-radius: 50%;
+    border: 2px solid var(--mantine-color-body);
+    flex-shrink: 0;
+}

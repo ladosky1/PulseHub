@@ -1,0 +1,118 @@
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 9px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid transparent;
+    transition: all 150ms ease;
+    user-select: none;
+}
+
+.row:hover {
+    background: var(--mantine-color-default-hover);
+    border-color: var(--mantine-color-default-border);
+}
+
+.row:active {
+    transform: scale(0.995);
+}
+
+.selected {
+    background: color-mix(in srgb, var(--mantine-primary-color-filled) 8%, var(--mantine-color-default-hover));
+    border-color: color-mix(in srgb, var(--mantine-primary-color-filled) 16%, var(--mantine-color-default-border));
+}
+
+.selected:hover {
+    background: color-mix(in srgb, var(--mantine-primary-color-filled) 10%, var(--mantine-color-default-hover));
+}
+
+.avatar {
+    flex-shrink: 0;
+    border: 1px solid var(--mantine-color-default-border);
+    font-size: 12px;
+    font-weight: 700;
+    background: var(--mantine-color-default);
+}
+
+.info {
+    min-width: 0;
+    flex: 1;
+    gap: 2px;
+}
+
+.topRow {
+    min-width: 0;
+    width: 100%;
+}
+
+.username {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--mantine-color-text);
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    flex: 1;
+}
+
+.selected .username {
+    font-weight: 600;
+}
+
+.hasUnread .username {
+    font-weight: 600;
+}
+
+.preview {
+    font-size: 11.5px;
+    color: var(--mantine-color-dimmed);
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.hasUnread .preview {
+    color: var(--mantine-color-text);
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.unreadBadge {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 20px;
+    background: var(--mantine-primary-color-filled);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+@media (max-width: 48em) {
+    .row {
+        padding: 10px 10px;
+        border-radius: 12px;
+    }
+
+    .avatar {
+        width: 38px!important;
+        height: 38px!important;
+    }
+
+    .username {
+        font-size: 14px;
+    }
+}

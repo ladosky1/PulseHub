@@ -1,0 +1,13 @@
+.root[data-active] {
+    background-color: var(--mantine-primary-color-filled);
+    color: white;
+}
+
+.root[data-active] .label,
+.root[data-active] .section {
+    color: white;
+}
+
+.root[data-active]:hover {
+    background-color: var(--mantine-primary-color-filled-hover);
+}

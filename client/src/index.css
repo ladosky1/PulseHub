@@ -1,0 +1,28 @@
+html,
+body,
+#root{
+    min-height: 100%;
+}
+
+html,
+body {
+    background: var(--mantine-color-body);
+}
+
+body{
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root .mantine-AppShell-header,
+:root .mantine-AppShell-navbar {
+    background-color: var(--pulsehub-structural-surface);
+}
+
+:root .mantine-AppShell-main {
+    background-color: var(--mantine-color-body);
+}

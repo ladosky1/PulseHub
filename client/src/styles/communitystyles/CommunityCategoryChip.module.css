@@ -1,0 +1,44 @@
+.chip {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: rgba(248, 247, 255, 0.65);
+    font-weight: 500;
+    transition:
+        background-color 150ms ease,
+        border-color 150ms ease,
+        color 150ms ease;
+}
+
+.chip:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.chip[data-checked="true"] {
+    background-color: var(--mantine-primary-color-filled);
+    border-color: var(--mantine-primary-color-filled);
+    color: white;
+    font-weight: 600;
+}
+
+.chip[data-checked="true"]:hover {
+    background-color: var(--mantine-primary-color-filled-hover);
+    border-color: var(--mantine-primary-color-filled-hover);
+}
+
+[data-mantine-color-scheme="light"] .chip {
+    background: var(--mantine-color-body);
+    border-color: var(--mantine-color-default-border);
+    color: var(--mantine-color-dimmed);
+}
+
+[data-mantine-color-scheme="light"] .chip:hover {
+    background: var(--mantine-color-default-hover);
+    border-color: var(--mantine-color-default-border);
+}
+
+[data-mantine-color-scheme="light"] .chip[data-checked="true"] {
+    background-color: var(--mantine-primary-color-filled);
+    border-color: var(--mantine-primary-color-filled);
+    color: white;
+}

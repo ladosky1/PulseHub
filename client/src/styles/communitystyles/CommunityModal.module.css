@@ -1,0 +1,84 @@
+.modal {
+    background: var(--mantine-color-default);
+    border: 1px solid var(--mantine-color-default-border);
+    box-shadow: var(--mantine-shadow-xl);
+}
+
+.modalHeader {
+    padding:
+        var(--mantine-spacing-xl)
+        var(--mantine-spacing-xl)
+        var(--mantine-spacing-sm);
+}
+
+.modalTitle {
+    color: var(--mantine-color-text);
+    font-family: var(--mantine-font-family-headings);
+    font-size: var(--mantine-font-size-lg);
+    font-weight: 700;
+}
+
+.modalBody {
+    padding:
+        var(--mantine-spacing-md)
+        var(--mantine-spacing-xl)
+        var(--mantine-spacing-xl);
+}
+
+.closeButton {
+    color: var(--mantine-color-dimmed);
+}
+
+.closeButton:hover {
+    background: var(--mantine-color-default-hover);
+    color: var(--mantine-color-text);
+}
+
+.form {
+    width: 100%;
+}
+
+.label {
+    margin-bottom: 6px;
+    color: var(--mantine-color-text);
+    font-weight: 600;
+}
+
+.input {
+    background: var(--mantine-color-body);
+    border: 1px solid var(--mantine-color-default-border);
+    transition:
+        border-color 150ms ease,
+        box-shadow 150ms ease,
+        background-color 150ms ease;
+}
+
+.input:focus {
+    border-color: var(--mantine-primary-color-filled);
+    box-shadow: 0 0 0 1px var(--mantine-primary-color-filled);
+}
+
+.submitButton {
+    min-height: 42px;
+    margin-top: var(--mantine-spacing-xs);
+}
+
+@media (max-width: 36em) {
+    .modalHeader {
+        padding:
+            var(--mantine-spacing-lg)
+            var(--mantine-spacing-lg)
+            var(--mantine-spacing-xs);
+    }
+
+    .modalBody {
+        padding:
+            var(--mantine-spacing-md)
+            var(--mantine-spacing-lg)
+            var(--mantine-spacing-lg);
+    }
+
+    .submitButton {
+        min-height: 44px;
+    }
+}

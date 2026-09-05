@@ -1,0 +1,203 @@
+.container {
+    position: relative;
+    width: 100%;
+    overflow: clip;
+}
+
+.profileStage {
+    position: relative;
+    width: 100%;
+    min-height: 68vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 12px;
+}
+
+.watermark {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 520px;
+    max-width: 88vw;
+    height: auto;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+    user-select: none;
+}
+
+.centerConstrain {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.loadingWrap {
+    display: flex;
+    justify-content: center;
+    padding: 48px 0;
+}
+
+.alert {
+    font-size: 13px;
+}
+
+.profileCard {
+    background: var(--pulsehub-community-card-surface);
+    border: 1px solid var(--mantine-color-default-border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.cardInner {
+    padding: 32px 24px 20px;
+}
+
+.avatar {
+    border: 3px solid var(--pulsehub-community-card-surface);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: white;
+}
+
+.identity {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.username {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--mantine-color-text);
+}
+
+.metaRow {
+    color: var(--mantine-color-dimmed);
+    margin-top: 2px;
+}
+
+.metaIconWrap {
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.friendCount {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--mantine-color-dimmed);
+    line-height: 1.2;
+}
+
+.joinedDate {
+    font-size: 11px;
+    color: var(--mantine-color-dimmed);
+    opacity: 0.7;
+    margin-top: 2px;
+    letter-spacing: 0.01em;
+}
+
+.divider {
+    height: 1px;
+    background: var(--mantine-color-default-border);
+    margin: 0 16px;
+    opacity: 0.8;
+}
+
+.actionArea {
+    display: flex;
+    justify-content: center;
+    padding: 14px 16px;
+    background: color-mix(in srgb, var(--mantine-color-default) 50%, transparent);
+}
+
+.acceptRejectGroup {
+    width: 100%;
+    max-width: 240px;
+}
+
+.primaryAction {
+    height: 32px;
+    padding: 0 18px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.12) inset;
+}
+
+.primaryAction:hover {
+    filter: brightness(1.05);
+}
+
+.subduedAction {
+    height: 32px;
+    padding: 0 18px;
+    font-size: 12px;
+    font-weight: 500;
+    background: var(--mantine-color-default);
+    border: 1px solid var(--mantine-color-default-border);
+    color: var(--mantine-color-dimmed);
+}
+
+.dangerAction {
+    height: 32px;
+    padding: 0 18px;
+    font-size: 13px;
+    font-weight: 500;
+    background: var(--mantine-color-default);
+    border: 1px solid var(--mantine-color-default-border);
+    color: var(--mantine-color-dimmed);
+}
+
+.dangerAction:hover:not(:disabled) {
+    color: var(--mantine-color-red-5);
+    border-color: color-mix(in srgb, var(--mantine-color-red-5) 30%, var(--mantine-color-default-border));
+    background: var(--mantine-color-default-hover);
+}
+
+@media (max-width: 48em) {
+    .centerConstrain {
+        max-width: 100%;
+    }
+
+    .profileCard {
+        border-radius: 16px;
+    }
+
+    .cardInner {
+        padding: 24px 16px 16px;
+    }
+
+    .avatar {
+        width: 72px!important;
+        height: 72px!important;
+        font-size: 20px!important;
+        border-radius: 18px!important;
+    }
+
+    .username {
+        font-size: 19px;
+    }
+
+    .actionArea {
+        padding: 12px 14px;
+    }
+
+    .acceptRejectGroup {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .primaryAction,
+    .subduedAction,
+    .dangerAction {
+        flex: 1;
+        max-width: 160px;
+    }
+}
