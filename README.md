@@ -30,7 +30,7 @@ PulseHub is a real-time multimedia and community discussion platform built for d
 - TypeScript
 - Vite
 - Mantine UI
-- Tailwind CSS
+- CSS modules
 - React Router
 - TanStack React Query
 - Motion
