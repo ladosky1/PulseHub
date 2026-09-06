@@ -7,7 +7,7 @@ interface AuthProviderProps {
     children: ReactNode;
 };
 
-export function AuthProvider({ children }: AuthProviderProps | null){
+export function AuthProvider({ children }: AuthProviderProps){
     const {data, isLoading} = useCurrentUser();
 
     const user = data?.user ?? null;

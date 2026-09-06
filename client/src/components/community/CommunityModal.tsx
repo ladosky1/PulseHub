@@ -61,7 +61,7 @@ export function CreateCommunityModal({
         createCommunity(
             {
                 name: values.name,
-                description: values.description || undefined,
+                description: values.description,
                 category: values.category,
             },
             {
