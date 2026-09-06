@@ -2,7 +2,7 @@ import session from "express-session";
 import MongoStore from "connect-mongo";
 import { env } from "./env.js";
 
-const isProduction = env.NODE_ENV === "production"
+const isProduction = env.NODE_ENV === "production";
 
 export const sessionMiddleware = session({
     secret: env.SESSION_SECRET,
@@ -17,7 +17,7 @@ export const sessionMiddleware = session({
 
     cookie: {
         httpOnly: true,
-        secure: false,
+        secure: isProduction,
         sameSite: isProduction ? "none" : "lax",
         maxAge: 1000 * 60 * 60 * 24 * 7,
     },
