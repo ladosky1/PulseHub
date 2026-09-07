@@ -89,17 +89,43 @@
 
   .fields { gap: 11px; }
 
-  .label { color: var(--mantine-color-text) !important; }
+  .label {
+    color: rgba(255,255,255,0.88) !important;
+  }
 
   .inputField {
     height: 42px !important;
-    background: light-dark(rgba(255,255,255,0.94), rgba(22,22,30,0.94)) !important;
-    border: 1px solid light-dark(rgba(0,0,0,0.12), rgba(255,255,255,0.1)) !important;
-    color: var(--mantine-color-text) !important;
+    background: rgba(18,18,24,0.86) !important;
+    border: 1px solid rgba(255,255,255,0.14) !important;
+    color: #fafafa !important;
   }
 
   .inputField::placeholder {
-    color: var(--mantine-color-dimmed) !important;
+    color: rgba(255,255,255,0.46) !important;
+  }
+
+  .inputField input::placeholder {
+    color: rgba(255,255,255,0.46) !important;
+  }
+
+  .inputField:focus,
+  .inputField[data-with-focus] {
+    background: rgba(18,18,24,0.92) !important;
+    border-color: color-mix(in srgb, var(--mantine-primary-color-filled) 56%, rgba(255,255,255,0.16)) !important;
+  }
+
+  .inputField:global(.mantine-PasswordInput-input) ~ :global(.mantine-PasswordInput-visibilityToggle),
+  :global(.mantine-PasswordInput-visibilityToggle) {
+    color: rgba(255,255,255,0.68) !important;
+  }
+
+  :global(.mantine-PasswordInput-visibilityToggle:hover) {
+    color: rgba(255,255,255,0.92) !important;
+    background: rgba(255,255,255,0.08) !important;
+  }
+
+  :global(.mantine-Input-input)::placeholder {
+    color: rgba(255,255,255,0.46) !important;
   }
 
   .button { margin-top: 14px; }
