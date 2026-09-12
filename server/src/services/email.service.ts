@@ -1,12 +1,11 @@
-import { transporter } from "../config/mail.js";
+import { resend } from "../config/mail.js";
 import { env } from "../config/env.js";
-import { buildPulseHubEmail } from "../emails/emailTemplate.js"; 
-
+import { buildPulseHubEmail } from "../emails/emailTemplate.js";
 
 export async function sendVerificationEmail(
     email: string,
     code: string,
-){
+) {
     const html = buildPulseHubEmail({
         title: "Verify your account",
         description: "Welcome to PulseHub — use the code below to verify your email address.",
@@ -16,18 +15,24 @@ export async function sendVerificationEmail(
         preheader: `Your PulseHub verification code is ${code}`,
     });
 
-    await transporter.sendMail({
-        from: env.EMAIL_USER,
+    const { data, error } = await resend.emails.send({
+        from: env.EMAIL_FROM,
         to: email,
         subject: "Verify your PulseHUB account",
         html,
-    })
+    });
+
+    if (error) {
+        throw new Error(`Verification email failed: ${error.message}`);
+    }
+
+    return data;
 }
 
 export async function sendResetPasswordEmail(
     email: string,
-    code: string
-){
+    code: string,
+) {
     const html = buildPulseHubEmail({
         title: "Reset your password",
         description: "Use the code below to reset your PulseHub password.",
@@ -37,10 +42,16 @@ export async function sendResetPasswordEmail(
         preheader: `Your PulseHub password reset code is ${code}`,
     });
 
-    await transporter.sendMail({
-        from: env.EMAIL_USER,
+    const { data, error } = await resend.emails.send({
+        from: env.EMAIL_FROM,
         to: email,
-        subject: "Reset your PulseHUB password",
+        subject: "Reset your PulseHUB account password",
         html,
-    })
+    });
+
+    if (error) {
+        throw new Error(`Password reset email failed: ${error.message}`);
+    }
+
+    return data;
 }
